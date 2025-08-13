@@ -63,7 +63,7 @@ CMakeUserPresets.json
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *$py.class
-
+*.py[coz]
 # C extensions
 *.so
 
