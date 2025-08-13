@@ -2,7 +2,7 @@
  * Execute o processo de build do projeto utilizando o MSVC.
  *
  * Args:
- * target_name (const std::string &): Nome do target a ser compilado.
+ * target (const std::string &): Nome do target a ser compilado.
  *
  * Returns:
  * void: Não retorna valor.
@@ -21,7 +21,7 @@ namespace py = pybind11;
  * Execute o build do projeto com target customizado via MSVC.
  *
  * Args:
- * target_name (const std::string &): Nome do target a ser compilado.
+ * target (const std::string &): Nome do target a ser compilado.
  *
  * Returns:
  * void: Não retorna valor.
@@ -29,7 +29,7 @@ namespace py = pybind11;
  * Raises:
  * std::runtime_error: Caso ocorra erro durante o processo de build.
  */
-void build_msvc(const std::string &target_name)
+void build_msvc(const std::string &target)
 {
     // Comando para gerar os arquivos de build com CMake e MSVC
     const char *cmake_cmd =
@@ -48,7 +48,7 @@ void build_msvc(const std::string &target_name)
 
     // Monta o comando para compilar o target especificado
     std::string build_cmd =
-        "cmake --build build --config Release --target " + target_name;
+        "cmake --build build --config Release --target " + target;
 
     // Executa o comando de build
     ret = std::system(build_cmd.c_str());

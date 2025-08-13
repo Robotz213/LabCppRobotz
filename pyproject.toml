@@ -1,0 +1,18 @@
+[project]
+name = "labcpprobotz"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Robotz213",email = "nicholas@robotz.dev"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "buildproj @ file:///C:/Github/buildproj/dist/buildproj-0.1.1a3-py3-none-any.whl"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
