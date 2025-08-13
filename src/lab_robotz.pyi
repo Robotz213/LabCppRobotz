@@ -1,0 +1,6 @@
+from typing import ClassVar
+
+class PySomeClass:
+    multiplicador: ClassVar[float]
+    def __init__(self, multiplicador_: float): ...
+    def multiply(self, valor: float) -> float: ...
